@@ -1,11 +1,11 @@
 This is Easy install setting on MacOS application that I use
 
-Requirement
+# Requirement
 - pip
 - ansible
 - Xcode
 
-Installation
+# Installation
 1. Ensure install pip
 $ sudo easy_install pip
 2. Ensure Install ansible
