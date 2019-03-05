@@ -1,24 +1,14 @@
 ---
+# One command that config everything!
+
 - hosts: localhost
 
-  tasks:
-  - name: Install homebrew
-    shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-    args: 
-      creates: /usr/local/bin/brew
+  pre_tasks:
+    - name: Simple echo command for recognize
+      shell: echo 'Hello ' $HOSTNAME $USER
+      register: command_result
+    - debug: msg={{ command_result.stdout }}
 
-  - name: Ensure homebrew is updated
-    homebrew:
-      state: latest
-      update_homebrew: yes
-
-  - name: Upgrade pip
-    command: "pip install --upgrade pip"
-    tags:
-      - python
-
-  - name: Install Virtualbox and Vagrant via brew cask
-    homebrew_cask: 
-      name: vagrant 
-      state: present
-      accept_external_apps: True
+  roles:
+    - configuration-common
+    - mac-applications

@@ -3,3 +3,9 @@
   tasks:
   - name: Test Network by Ping module
     ping:
+
+  - name: Test Echo Back
+    shell: echo "Hostname and User=" $HOSTNAME $USER
+    register: command_result
+
+  - debug: msg={{ command_result.stdout }}
