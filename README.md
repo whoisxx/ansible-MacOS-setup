@@ -1,8 +1,7 @@
 This is Easy install setting on MacOS application that I use
 
 Requirement
-- git
-- brew
+- pip
 - ansible
 
 Installation
