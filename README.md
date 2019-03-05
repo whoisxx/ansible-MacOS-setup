@@ -1,4 +1,6 @@
-This is Easy install setting on MacOS application that I use
+This is Easy install setting on MacOS application that I use.
+There are 2 roles on this ansible, configuration-common is task lists for homebrew install and upate
+mac-applications role is for install particular applications. you can change main.yml file to customizing your preferences 
 
 # Requirement
 - pip
@@ -25,6 +27,6 @@ $ git clone https://github.com/whoisxx/ansible-MacOS-setup
 
 # Play
 ```
-ansible-playbook playbook.yml
+$ ansible-playbook playbook.yml
 ```
 
