@@ -12,10 +12,13 @@
       state: latest
       update_homebrew: yes
 
+  - name: Upgrade pip
+    command: "pip install --upgrade pip"
+    tags:
+      - python
+
   - name: Install Virtualbox and Vagrant via brew cask
-    homebrew_cask: name={{ item }}
-    with_items:
-      - virtualbox
-      - vagrant
-
-
+    homebrew_cask: 
+      name: vagrant 
+      state: present
+      accept_external_apps: True
