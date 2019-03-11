@@ -1,0 +1,7 @@
+---
+- name: Clock Setting on system preference
+  osx_defaults:
+    domain: 'com.apple.menuextra.clock'
+    key: 'DateFormat'
+    type: string
+    value: EEE MMM d  HH:mm

@@ -25,3 +25,5 @@
     - evernote
     - tor-browser
     - anaconda
+
+- include: zsh.yml

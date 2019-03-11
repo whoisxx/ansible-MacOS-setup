@@ -12,3 +12,4 @@
   roles:
     - configuration-common
     - mac-applications
+    - mac-system
