@@ -14,7 +14,7 @@ $ sudo easy_install pip
 ```
 2. Ensure Install ansible
 ```
-$ sudo easy_install ansible
+$ sudo pip install ansible
 ```
 3. Ensure Install Xcode
 ```
