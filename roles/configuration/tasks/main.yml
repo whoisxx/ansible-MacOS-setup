@@ -8,3 +8,5 @@
   homebrew:
     state: latest
     update_homebrew: yes
+
+- include: system.yml
