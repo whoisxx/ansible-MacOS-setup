@@ -10,24 +10,3 @@
 
   - debug: msg={{ command_result.stdout }}
 
-  - name: Test osx_defaults
-    osx_defaults:
-      domain: 'com.apple.menuextra.clock'
-      key: 'DateFormat'
-      type: string
-      value: EEE MMM d  HH:mm
-
-  - name: Show battery percent
-    osx_defaults:
-      domain: 'com.apple.menuextra.battery'
-      key: 'ShowPercent'
-      type: string
-      value: 'YES'
-
-  - name: Language Setup for KR and ENG
-    osx_defaults:
-      key: AppleLanguages
-      type: array
-      value:
-        - en
-        - kr
